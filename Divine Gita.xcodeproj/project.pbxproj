@@ -16,6 +16,12 @@
 		CB1F9DF72C1CEF94003A378B /* Divine_GitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9DF62C1CEF94003A378B /* Divine_GitaTests.swift */; };
 		CB1F9E012C1CEF94003A378B /* Divine_GitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9E002C1CEF94003A378B /* Divine_GitaUITests.swift */; };
 		CB1F9E032C1CEF94003A378B /* Divine_GitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9E022C1CEF94003A378B /* Divine_GitaUITestsLaunchTests.swift */; };
+		CB1F9E112C1D450C003A378B /* NKUtility in Frameworks */ = {isa = PBXBuildFile; productRef = CB1F9E102C1D450C003A378B /* NKUtility */; };
+		CB1F9E142C1D45E1003A378B /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = CB1F9E132C1D45E1003A378B /* SwiftyBeaver */; };
+		CB1F9E172C1D62D3003A378B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9E162C1D62D3003A378B /* ContentViewModel.swift */; };
+		CBB21EAA2C20199E0036EBB8 /* BGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB21EA92C20199E0036EBB8 /* BGLogger.swift */; };
+		CBB21EAD2C2036C20036EBB8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CBB21EAC2C2036C20036EBB8 /* Swinject */; };
+		CBB21EAF2C2036EB0036EBB8 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB21EAE2C2036EB0036EBB8 /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,9 @@
 		CB1F9DFC2C1CEF94003A378B /* Divine GitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Divine GitaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1F9E002C1CEF94003A378B /* Divine_GitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divine_GitaUITests.swift; sourceTree = "<group>"; };
 		CB1F9E022C1CEF94003A378B /* Divine_GitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divine_GitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB1F9E162C1D62D3003A378B /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CBB21EA92C20199E0036EBB8 /* BGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGLogger.swift; sourceTree = "<group>"; };
+		CBB21EAE2C2036EB0036EBB8 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1F9E112C1D450C003A378B /* NKUtility in Frameworks */,
+				CB1F9E142C1D45E1003A378B /* SwiftyBeaver in Frameworks */,
+				CBB21EAD2C2036C20036EBB8 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +110,15 @@
 		CB1F9DDF2C1CEF92003A378B /* Divine Gita */ = {
 			isa = PBXGroup;
 			children = (
+				CBB21EAE2C2036EB0036EBB8 /* Injection.swift */,
+				CB1F9E152C1D62C8003A378B /* ViewModels */,
 				CB1F9DE02C1CEF92003A378B /* Divine_GitaApp.swift */,
 				CB1F9DE22C1CEF92003A378B /* ContentView.swift */,
 				CB1F9DE42C1CEF93003A378B /* Assets.xcassets */,
 				CB1F9DE92C1CEF93003A378B /* Persistence.swift */,
 				CB1F9DEB2C1CEF93003A378B /* Divine_Gita.xcdatamodeld */,
 				CB1F9DE62C1CEF93003A378B /* Preview Content */,
+				CBB21EA92C20199E0036EBB8 /* BGLogger.swift */,
 			);
 			path = "Divine Gita";
 			sourceTree = "<group>";
@@ -133,6 +148,14 @@
 			path = "Divine GitaUITests";
 			sourceTree = "<group>";
 		};
+		CB1F9E152C1D62C8003A378B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CB1F9E162C1D62D3003A378B /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB1F9E062C1CEF94003A378B /* Build configuration list for PBXNativeTarget "Divine Gita" */;
 			buildPhases = (
+				CBB21EA82C2019140036EBB8 /* SwiftLint */,
 				CB1F9DD92C1CEF92003A378B /* Sources */,
 				CB1F9DDA2C1CEF92003A378B /* Frameworks */,
 				CB1F9DDB2C1CEF92003A378B /* Resources */,
@@ -149,6 +173,11 @@
 			dependencies = (
 			);
 			name = "Divine Gita";
+			packageProductDependencies = (
+				CB1F9E102C1D450C003A378B /* NKUtility */,
+				CB1F9E132C1D45E1003A378B /* SwiftyBeaver */,
+				CBB21EAC2C2036C20036EBB8 /* Swinject */,
+			);
 			productName = "Divine Gita";
 			productReference = CB1F9DDD2C1CEF92003A378B /* Divine Gita.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +250,11 @@
 				Base,
 			);
 			mainGroup = CB1F9DD42C1CEF92003A378B;
+			packageReferences = (
+				CB1F9E0F2C1D450C003A378B /* XCRemoteSwiftPackageReference "NKUtility" */,
+				CB1F9E122C1D45E1003A378B /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				CBB21EAB2C2036C20036EBB8 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = CB1F9DDE2C1CEF92003A378B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,15 +292,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CBB21EA82C2019140036EBB8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB1F9DD92C1CEF92003A378B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB21EAF2C2036EB0036EBB8 /* Injection.swift in Sources */,
 				CB1F9DEA2C1CEF93003A378B /* Persistence.swift in Sources */,
 				CB1F9DE32C1CEF92003A378B /* ContentView.swift in Sources */,
+				CBB21EAA2C20199E0036EBB8 /* BGLogger.swift in Sources */,
 				CB1F9DE12C1CEF92003A378B /* Divine_GitaApp.swift in Sources */,
 				CB1F9DED2C1CEF93003A378B /* Divine_Gita.xcdatamodeld in Sources */,
+				CB1F9E172C1D62D3003A378B /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +648,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB1F9E0F2C1D450C003A378B /* XCRemoteSwiftPackageReference "NKUtility" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bee-honey/NKUtility";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		CB1F9E122C1D45E1003A378B /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+		CBB21EAB2C2036C20036EBB8 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB1F9E102C1D450C003A378B /* NKUtility */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB1F9E0F2C1D450C003A378B /* XCRemoteSwiftPackageReference "NKUtility" */;
+			productName = NKUtility;
+		};
+		CB1F9E132C1D45E1003A378B /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB1F9E122C1D45E1003A378B /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		CBB21EAC2C2036C20036EBB8 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBB21EAB2C2036C20036EBB8 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CB1F9DEB2C1CEF93003A378B /* Divine_Gita.xcdatamodeld */ = {
