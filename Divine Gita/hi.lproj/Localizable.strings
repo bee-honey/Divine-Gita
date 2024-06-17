@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Divine Gita
+
+  Created by Naveen Keerthy on 6/17/24.
+  
+*/
+
+//ContentView
+"ContentView.bhagavad_gita_chapter %@" = "श्रीमद्भगवद्गीता चैप्टर: %@";
