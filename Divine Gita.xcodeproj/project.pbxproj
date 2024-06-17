@@ -23,6 +23,7 @@
 		CBB21EAD2C2036C20036EBB8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CBB21EAC2C2036C20036EBB8 /* Swinject */; };
 		CBB21EAF2C2036EB0036EBB8 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB21EAE2C2036EB0036EBB8 /* Injection.swift */; };
 		CBB21EB22C20BB7A0036EBB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBB21EB02C20BB7A0036EBB8 /* Localizable.strings */; };
+		CBCDAD0C2C20EADE00F5CA24 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDAD0B2C20EADE00F5CA24 /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		CBB21EAE2C2036EB0036EBB8 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		CBB21EB12C20BB7A0036EBB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBCDAD092C20CF2300F5CA24 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CBCDAD0B2C20EADE00F5CA24 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		CB1F9DDF2C1CEF92003A378B /* Divine Gita */ = {
 			isa = PBXGroup;
 			children = (
+				CBCDAD0B2C20EADE00F5CA24 /* Strings+Generated.swift */,
 				CBB21EAE2C2036EB0036EBB8 /* Injection.swift */,
 				CB1F9E152C1D62C8003A378B /* ViewModels */,
 				CB1F9DE02C1CEF92003A378B /* Divine_GitaApp.swift */,
@@ -168,6 +171,7 @@
 			buildConfigurationList = CB1F9E062C1CEF94003A378B /* Build configuration list for PBXNativeTarget "Divine Gita" */;
 			buildPhases = (
 				CB1F9DD92C1CEF92003A378B /* Sources */,
+				CBCDAD0A2C20EA6200F5CA24 /* Swiftgen */,
 				CBCDAD082C20BFF700F5CA24 /* Swiftlint */,
 				CB1F9DDA2C1CEF92003A378B /* Frameworks */,
 				CB1F9DDB2C1CEF92003A378B /* Resources */,
@@ -318,6 +322,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
 		};
+		CBCDAD0A2C20EA6200F5CA24 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -331,6 +353,7 @@
 				CBB21EAA2C20199E0036EBB8 /* BGLogger.swift in Sources */,
 				CB1F9DE12C1CEF92003A378B /* Divine_GitaApp.swift in Sources */,
 				CB1F9DED2C1CEF93003A378B /* Divine_Gita.xcdatamodeld in Sources */,
+				CBCDAD0C2C20EADE00F5CA24 /* Strings+Generated.swift in Sources */,
 				CB1F9E172C1D62D3003A378B /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
